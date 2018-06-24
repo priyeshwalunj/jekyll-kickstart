@@ -1,51 +1,77 @@
 .header
-   display: flex
-   align-items: center
-   justify-content: space-around
-   background: #fff
+   padding: 10px 0
+   .container
+      display: flex
+      align-items: center
+      justify-content: space-between
+      padding: 10px
+      background: #fff
+      +mq(min, 768px)
+         padding: 0
    .toggle-btn
       position: relative
-      width: 40px
-   span
+      width: 25px
+      +mq(min, 768px)
+         display: none
+   .hamburger
       background: $secondary
-      border: 1px solid red
-      height: 1px 
+      border: 1px solid #ccc
+      height: 0
       width: 100%
       display: block
       position: absolute
-      top: 50%
-      left: 50%
-      -webkit-transform: translate(-50%, -50%)
-      -o-transform: translate(-50%, -50%)
-      -moz-transform: translate(-50%, -50%)
-      -ms-transform: translate(-50%, -50%)
-      transform: translate(-50%, -50%)
+      left: 5px
+      top: 0
+      +mq(min, 768px)
+         position: absolute
+         top: 50%
+         left: 10px
       &:before
          content: ""
-         border: 1px solid red
-         height: 1px 
+         border: 1px solid #ccc
+         height: 0
          width: 100%
          position: absolute
          top: -8px
-         left: 0
+         left: -1px
       &:after
          content: ""
-         border: 1px solid red
-         height: 1px
+         border: 1px solid #ccc
+         height: 0
          width: 100%
          position: absolute
-         top: 8px
-         left: 0
+         top: 6px
+         left: -1px
    .logo
       display: flex
       align-items: center
    .navbar 
-      display: none
-      ul
+      position: absolute
+      left: -150px
+      top: 40px
+      height: 100%
+      width: 125px
+      transition: all 0.5s ease
+      background: #dddddd
+      +mq(min, 768px)
          display: flex
+         position: inherit
+         width: auto
+         align-items: center
+      ul
          list-style: none
-         margin: 0
+         margin: 10px auto
+         padding: 0
+         +mq(min, 768px)
+            display: flex
+            margin: 0
       li 
-         padding: 8px
-   a 
-      text-decoration: none
+         padding: 12px
+         +mq(min, 768px)
+            padding: 8px
+      a 
+         text-decoration: none
+         color: #000
+   .navbar-show
+      left: 0
+      transition: all 0.5s ease
