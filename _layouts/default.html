@@ -6,10 +6,7 @@
         <div class="loader">
             <div></div>
         </div>
-        {% assign navigation = "Home,About Us,Gallery,Team,Career,Contact" | split: ',' %}
-        {% include header.html 
-            navigation=navigation    
-        %}
+        
         <div class="wrapper {{page.WrapperClass}}">
             {{content}}
         </div>
