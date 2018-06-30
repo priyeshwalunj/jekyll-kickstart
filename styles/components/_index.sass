@@ -1,7 +1,4 @@
-h2 
-    margin: 0
 .container
-    display: flex
     .card
         height: 150px
         width: 270px  
@@ -14,9 +11,16 @@ h2
         background-image: url('../images/blue.png')
         background-repeat: no-repeat
         color: #fff
-        -webkit-box-shadow: 10px 4px 62px -18px rgba(0,0,0,0.29)
-        -moz-box-shadow: 10px 4px 62px -18px rgba(0,0,0,0.29)
-        box-shadow: 10px 4px 62px -18px rgba(0,0,0,0.29)
+        -webkit-box-shadow: 9px 9px 20px 0px rgba(0, 0, 0, 0.13)
+        -moz-box-shadow: 9px 9px 20px 0px rgba(0, 0, 0, 0.13)
+        box-shadow: 9px 9px 20px 0px rgba(0, 0, 0, 0.13)
+        transition: 0.3s ease all
+        &:hover
+            -webkit-box-shadow: 4px 4px 20px 0px rgba(0, 0, 0, 0.13)
+            -moz-box-shadow: 4px 4px 20px 0px rgba(0, 0, 0, 0.13)
+            box-shadow: 4px 4px 20px 0px rgba(0, 0, 0, 0.13)
+            transition: 0.3s ease all        
+        span 
+            font-size: em(12)
     a
         text-decoration: none
-        font-size: 18px

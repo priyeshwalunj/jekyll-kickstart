@@ -2,7 +2,9 @@
 layout: default
 ---
 
-{% include header.html %}
+{% if page.title != 'Home Page' %} 
+    {% include sidebar.html %} 
+{% endif %}
 
 <div class="content-area">
     {{content}}
