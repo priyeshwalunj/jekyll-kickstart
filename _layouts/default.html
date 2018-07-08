@@ -1,17 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
 {% include head.html %}
-<body>
-    <div class="{{page.pageClass}}">
-        <div class="loader">
-            <div></div>
-        </div>
-        
-        <div class="wrapper {{page.WrapperClass}}">
-            <div class="container">
-                {{content}}
-            </div>
-        </div>
+<body class="{{page.pageClass}}">
+    <!-- laoder start -->
+    <div class="loader">
+        <div></div>
+    </div>
+    <!-- loader end -->
+    
+    <div class="wrapper {{page.WrapperClass}}">
+        {{content}}
     </div>
     {% include scripts.html %}
 </body>

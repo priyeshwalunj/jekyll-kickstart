@@ -1,7 +1,12 @@
 $(document).ready(function(){
     
     $('.toggle-btn').on('click',function(){
-        $('.navbar').toggleClass('navbar-show');
+        $('.sidebar').toggleClass('sidebar-show');
+        $('.content-area').toggleClass('content-area-overlay');
+    });
+
+    $('.content-area').on('click', function() {
+        console.log('within loop');
     });
 
 });
