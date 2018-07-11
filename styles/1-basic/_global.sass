@@ -9,8 +9,9 @@ body
     height: 100vh
 
 .content-area 
-    flex: 5
-
+    flex: 1
+    +mq(min,768px)
+        flex: 5
 ul 
     list-style: none
     padding: 0
@@ -22,28 +23,14 @@ a
     text-decoration: none
     color: #969494
 .container
-    // display: flex
+    display: flex
     width: 96%
     margin: 0 auto
     align-items: center
-    .header 
-        text-transform: uppercase
-        font-weight: normal
     .content-area 
         width: 100%
-    .box 
+    .box    
         width: 100%
-        // display: flex
-        flex-direction: column
-        align-items: center
-        .row 
-            display: flex
-            flex-wrap: wrap
-            justify-content: center
-        .card-wrapper
-            padding: 10px
-        .card
-            span 
-                padding: 0 15px
-                line-height: 24px
-                text-align: center
+    .box-header 
+        text-transform: uppercase
+        font-weight: 400

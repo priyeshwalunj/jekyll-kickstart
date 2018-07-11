@@ -1,13 +1,23 @@
-$(document).ready(function(){
-    
-    $('.toggle-btn').on('click',function(){
+$(document).ready(function() {
+
+    $('.toggle-btn').on('click', function() {
         $('.sidebar').toggleClass('sidebar-show');
-        $('.content-area').toggleClass('content-area-overlay');
     });
 
-    $('.content-area').on('click', function() {
-        console.log('within loop');
-    });
+    
+    
+    var sidebarShow = $('.sidebar').hasClass('sidebar-show');
+    
+    if(sidebarShow) {
 
+        $('.content-area').on('click', function() {
+            console.log('content click')
+        })
+        console.log('true');
+        $('.sidebar').removeClass('.sidebar-show');
+    }
+
+    $('.sidebar').on('change', function() {
+        console.log('content click')
+    })
 });
-
