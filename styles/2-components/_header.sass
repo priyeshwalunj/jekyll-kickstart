@@ -7,13 +7,19 @@
       display: flex
       align-items: center
       justify-content: space-between
-      width: 100%
-      margin: 0 8px
+      // width: 100%
+      // margin: 0 8px
       +mq(min, 768px)
       padding: 0
    .toggle-btn
       position: relative
       width: 25px
+      +mq(min, 768px)
+         display: none
+   .responsive-logo
+      display: block
+      img 
+         height: 50px
       +mq(min, 768px)
          display: none
    .hamburger

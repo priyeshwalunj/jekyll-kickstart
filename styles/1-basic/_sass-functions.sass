@@ -1,0 +1,50 @@
+// functions 
+$browser-context: 16 // Default value 
+
+@function em($pixels, $context: $browser-context) 
+  @return #{$pixels/$context}em
+
+$width: 100%
+
+@function grid($column,$width: $width)
+    @return #{($column/12)*$width}
+
+.grid-1
+    flex: 0 0 grid(1)
+.grid-2
+    flex: 0 0 grid(2)
+.grid-3
+    flex: 0 0 grid(3)
+.grid-4
+    flex: 0 0 grid(4)
+.grid-5
+    flex: 0 0 grid(5)
+.grid-6
+    flex: 0 0 grid(6)
+.grid-7
+    flex: 0 0 grid(7)
+.grid-8
+    flex: 0 0 grid(8)
+.grid-9
+    flex: 0 0 grid(9)
+.grid-10
+    flex: 0 0 grid(10)
+.grid-11
+    flex: 0 0 grid(11)
+.grid-12
+    flex: 0 0 grid(12)
+
++mq(max, 768px)
+    .grid-1,
+    .grid-2,
+    .grid-3,
+    .grid-4,
+    .grid-5,
+    .grid-6,
+    .grid-7,
+    .grid-8,
+    .grid-9,
+    .grid-10,
+    .grid-11,
+    .grid-12,
+        flex: 0 0 100%

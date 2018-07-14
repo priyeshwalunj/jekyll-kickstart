@@ -1,18 +1,60 @@
+.container   
+    padding: em(20) 0
+
 .box
-    webkit-box-shadow: 0 0 1.25em #eaeef0
-    -o-box-shadow: 0 0 1.25em #eaeef0
-    -moz-box-shadow: 0 0 1.25em #eaeef0
-    -ms-box-shadow: 0 0 1.25em #eaeef0
-    box-shadow: 0 0 1.25em #eaeef0
-    border-radius: 0.3125em
     margin-bottom: 1.25em
+    border-top-left-radius: em(10)
+    border-top-right-radius: em(10)
+    webkit-box-shadow: 0px 7px 1em 0px $secondary
+    -o-box-shadow: 0px 7px 1em 0px $secondary
+    -moz-box-shadow: 0px 7px 1em 0px $secondary
+    -ms-box-shadow: 0px 7px 1em 0px $secondary
+    box-shadow: 0px 7px 1em 0px $secondary
+
 .box-header
-    padding: 10px 20px
-    background-color: #eaeef0
-    border-radius: 3px
     display: flex
     justify-content: space-between
+    padding: em(10) em(20)
+    font-size: em(16)
+    border-top-left-radius: em(8)
+    border-top-right-radius: em(8)
+    background-color: $secondary
+    +mq(max, 768px)
+        padding: 0.625em 0.5em
 .box-content
-    padding: 10px
-    padding: 10px
-    border: 1px solid #000
+    padding: em(10)
+
+.form-layout 
+    font-size: em(15)
+    .form-row
+        display: flex
+        flex-basis: 100%
+        flex-wrap: wrap
+    .form-field
+        display: flex
+        flex-direction: column
+        padding: 0 em(8) em(10)
+        >label
+            padding-bottom: em(8)
+            color: $primary
+        +mq(max, 768px)
+            padding: 0 0 em(10)
+        &.mandatory
+            >label:after
+                content: '*'
+                color: red
+                vertical-align: top
+                margin-left: 3px
+                font-size: em(14)
+                font-weight: 100
+        input
+            height: 25px
+            border-radius: 3px
+            border-style: solid
+            border: 1px solid $primary
+            outline: none
+            padding: em(5) em(10)
+            font-size: em(15)
+            &::placeholder
+                color: $primary
+                font-weight: lighter
