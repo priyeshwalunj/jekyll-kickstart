@@ -20,4 +20,11 @@ $(document).ready(function() {
     $('.sidebar').on('change', function() {
         console.log('content click')
     })
+
+    $('.nav li a').on('click', function() {
+        clickValue = $(this).text();
+
+        console.log(clickValue);
+    })
+
 });
