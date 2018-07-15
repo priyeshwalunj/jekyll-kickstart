@@ -33,12 +33,14 @@
     .form-field
         display: flex
         flex-direction: column
-        padding: 0 em(8) em(10)
+        padding: 0 0 em(10)
+        flex: 0 0 100%
         >label
             padding-bottom: em(8)
             color: $primary
-        +mq(max, 768px)
-            padding: 0 0 em(10)
+        +mq(min, 768px)
+            flex: 1 0 0
+            padding: 0 em(8) em(10)
         &.mandatory
             >label:after
                 content: '*'
